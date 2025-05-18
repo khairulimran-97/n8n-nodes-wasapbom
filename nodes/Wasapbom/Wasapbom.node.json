@@ -1,0 +1,21 @@
+{
+	"node": "n8n-nodes-base.WasapBom",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Communication",
+		"Messaging"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://panel.wasapbom.com/dashboard"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://panel.wasapbom.com/dashboard"
+			}
+		]
+	}
+}

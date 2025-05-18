@@ -1,46 +1,91 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# n8n-nodes-wasapbom
 
-# n8n-nodes-starter
+An n8n community node to integrate with WasapBom WhatsApp API directly in your workflows.
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+This node enables seamless WhatsApp messaging automation in n8n, allowing you to send messages, media, manage contacts, create groups, and perform other WhatsApp operations without leaving your workflow.
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+## Features
+
+- **Send Messages**: Text, Media (images, videos, documents, audio), Locations, and Contacts
+- **Contact Management**: Add and manage WhatsApp contacts
+- **Group Management**: Create and manage WhatsApp groups
+- **Chat Operations**: Check numbers, retrieve chat lists, and get messages
+- **Instance Management**: Get information about your WhatsApp instance
+
+## Installation
+
+Follow the [n8n community nodes installation guide](https://docs.n8n.io/integrations/community-nodes/installation/):
+
+1. Go to **Settings > Community Nodes**
+2. Select **Install**
+3. Enter `n8n-nodes-wasapbom` in the input field
+4. Agree to the risks of using community nodes
+5. Click **Install**
 
 ## Prerequisites
 
-You need the following installed on your development machine:
+- A WasapBom account (register at [panel.wasapbom.com](https://panel.wasapbom.com/))
+- API Key from WasapBom dashboard
+- n8n version 1.0.0 or newer
 
-* [git](https://git-scm.com/downloads)
-* Node.js and pnpm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+## Configuration
 
-## Using this starter
+1. In your n8n instance, navigate to **Credentials**
+2. Click **Create New Credentials**
+3. Search for "WasapBom API"
+4. Enter your API Key from the WasapBom dashboard
+5. Save the credentials
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+## Usage Examples
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm lint` to check for errors or `npm lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+### Send a Text Message
+1. Add a new WasapBom node
+2. Select "Message" as Resource
+3. Select "Send Text" as Operation
+4. Enter the recipient phone number (with country code, no +)
+5. Type your message text
+6. Connect to the rest of your workflow
 
-## More information
+### Send a Media Message
+1. Add a new WasapBom node
+2. Select "Message" as Resource
+3. Select "Send Media" as Operation
+4. Enter the recipient phone number
+5. Select the media type (image, video, document, audio)
+6. Enter the URL of the media
+7. Optionally add a caption
+8. Connect to the rest of your workflow
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+## Supported Operations
+
+### Message Operations
+- Send Text
+- Send Media (images, videos, documents, audio)
+- Send Location
+- Send Contact
+
+### Contact Operations
+- Add Contact
+
+### Group Operations
+- Create Group
+
+### Chat Operations
+- Check Numbers
+- Get Chats
+- Get Messages
+
+### Instance Operations
+- Get Info
 
 ## License
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+[MIT](LICENSE.md)
+
+## Author
+
+This node was created by [Khairul/Web Impian Sdn Bhd]
+
+## Resources
+- [WasapBom Panel](https://panel.wasapbom.com/)
+- [n8n Documentation](https://docs.n8n.io/)
