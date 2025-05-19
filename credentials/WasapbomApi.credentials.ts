@@ -6,7 +6,7 @@ INodeProperties,
 export class WasapbomApi implements ICredentialType {
 name = 'wasapbomApi';
 displayName = 'WasapBom API';
-documentationUrl = 'https://panel.wasapbom.com/api/whatsapp';
+documentationUrl = 'https://panel.wasapbom.com/dashboard';
 properties: INodeProperties[] = [
 {
 displayName: 'API Key',
